@@ -207,6 +207,89 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ===========================
+   Wedding Car Showcase Section
+   =========================== */
+
+.wedding-showcase {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-white);
+    overflow: hidden;
+}
+
+.wedding-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.wedding-image {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+}
+
+.showcase-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: var(--transition);
+}
+
+.showcase-img:hover {
+    transform: scale(1.05);
+}
+
+.wedding-text {
+    padding: var(--spacing-md);
+}
+
+.wedding-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+}
+
+.wedding-description {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.wedding-highlight {
+    font-size: 1.15rem;
+    color: var(--color-text);
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: var(--spacing-lg);
+    padding-left: var(--spacing-md);
+    border-left: 4px solid var(--color-gold);
+}
+
+.wedding-cta {
+    display: inline-block;
+    background-color: var(--color-gold);
+    color: var(--color-text);
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: var(--transition);
+    box-shadow: var(--shadow-medium);
+    text-decoration: none;
+}
+
+.wedding-cta:hover {
+    background-color: var(--color-gold-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* ===========================
    Why Section
    =========================== */
 
@@ -485,6 +568,10 @@ h1, h2, h3, h4, h5, h6 {
     .container {
         padding: 0 var(--spacing-sm);
     }
+
+    .wedding-content {
+        gap: var(--spacing-lg);
+    }
 }
 
 @media (max-width: 768px) {
@@ -528,6 +615,20 @@ h1, h2, h3, h4, h5, h6 {
 
     .service-card {
         padding: var(--spacing-md);
+    }
+
+    .wedding-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .wedding-title {
+        font-size: 2rem;
+    }
+
+    .wedding-description,
+    .wedding-highlight {
+        font-size: 1rem;
     }
 
     .pricing-grid {
@@ -614,6 +715,25 @@ h1, h2, h3, h4, h5, h6 {
 
     .service-description {
         font-size: 0.9rem;
+    }
+
+    .wedding-title {
+        font-size: 1.75rem;
+    }
+
+    .wedding-description {
+        font-size: 0.95rem;
+    }
+
+    .wedding-highlight {
+        font-size: 0.95rem;
+    }
+
+    .wedding-cta {
+        width: 100%;
+        text-align: center;
+        padding: 0.875rem 1.5rem;
+        font-size: 0.95rem;
     }
 
     .why-item {
