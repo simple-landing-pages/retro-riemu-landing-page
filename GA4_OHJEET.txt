@@ -1,0 +1,181 @@
+═══════════════════════════════════════════════════════════════
+  GOOGLE ANALYTICS 4 (GA4) KÄYTTÖÖNOTTO-OHJEET
+═══════════════════════════════════════════════════════════════
+
+📊 MITÄ GOOGLE ANALYTICS 4 TEKEE?
+──────────────────────────────────────────────────────────────
+
+Google Analytics 4 seuraa sivuston kävijöitä ja antaa arvokasta tietoa:
+
+✓ Kuinka monta kävijää sivulla käy
+✓ Mistä maista/kaupungeista kävijät tulevat
+✓ Mitä laitteita käyttävät (puhelin, tietokone, tabletti)
+✓ Kuinka kauan viettävät sivulla
+✓ Mitä sivun osia klikkaavat
+✓ Mistä löytävät sivusi (Google, suora linkki, jne.)
+
+
+📋 VAIHE 1: LUO GOOGLE ANALYTICS -TILI
+──────────────────────────────────────────────────────────────
+
+1. Mene osoitteeseen: https://analytics.google.com
+
+2. Kirjaudu Google-tilillesi (tai luo uusi)
+
+3. Klikkaa "Aloita mittaaminen" tai "Start measuring"
+
+4. Anna tilin nimi (esim. "Retroriemu")
+
+5. Klikkaa "Seuraava"
+
+
+📋 VAIHE 2: LUO OMINAISUUS (PROPERTY)
+──────────────────────────────────────────────────────────────
+
+1. Anna ominaisuuden nimi: "Retroriemu Website"
+
+2. Valitse aikavyöhyke: "(GMT+02:00) Helsinki"
+
+3. Valitse valuutta: "Euro (EUR)"
+
+4. Klikkaa "Seuraava"
+
+
+📋 VAIHE 3: TÄYTÄ YRITYSTIEDOT
+──────────────────────────────────────────────────────────────
+
+1. Toimiala: Valitse "Events & Entertainment" tai "Business Services"
+
+2. Yrityksen koko: Valitse sopiva vaihtoehto
+
+3. Käyttötarkoitus: Valitse "Generate leads" ja "Measure customer engagement"
+
+4. Klikkaa "Luo"
+
+
+📋 VAIHE 4: ASETA TIETOVIRTA (DATA STREAM)
+──────────────────────────────────────────────────────────────
+
+1. Valitse "Verkko" (Web)
+
+2. Verkkosivuston URL: Syötä sivusi osoite (esim. https://retroriemu.fi)
+
+3. Virran nimi: "Retroriemu Website"
+
+4. Klikkaa "Luo virta"
+
+
+📋 VAIHE 5: KOPIOI MITTAUSTUNNUS (MEASUREMENT ID)
+──────────────────────────────────────────────────────────────
+
+Näet nyt sivun, jossa näkyy:
+
+   📌 MITTAUSTUNNUS / MEASUREMENT ID: G-XXXXXXXXXX
+
+   (Esimerkki: G-ABC123DEF4)
+
+
+Kopioi tämä tunnus!
+
+
+📋 VAIHE 6: LISÄÄ TUNNUS SIVULLE
+──────────────────────────────────────────────────────────────
+
+Avaa nämä tiedostot ja KORVAA 'G-XXXXXXXXXX' omalla tunnuksellasi:
+
+1. index.html (rivi ~30):
+
+   Etsi: gtag/js?id=G-XXXXXXXXXX
+   Korvaa: gtag/js?id=G-ABC123DEF4  (oma tunnuksesi)
+
+   Etsi: gtag('config', 'G-XXXXXXXXXX');
+   Korvaa: gtag('config', 'G-ABC123DEF4');
+
+
+2. script.js (rivi ~221 ja ~228):
+
+   Etsi: gtag/js?id=G-XXXXXXXXXX
+   Korvaa: gtag/js?id=G-ABC123DEF4
+
+   Etsi: gtag('config', 'G-XXXXXXXXXX');
+   Korvaa: gtag('config', 'G-ABC123DEF4');
+
+
+📋 VAIHE 7: TESTAA TOIMINTA
+──────────────────────────────────────────────────────────────
+
+1. Avaa sivusi selaimessa
+
+2. Hyväksy evästeet eväste-ilmoituksesta
+
+3. Avaa selaimen konsoli (F12 → Console)
+   → Näet viestin: "Google Analytics 4 initialized"
+
+4. Mene Google Analytics -tilillesi
+
+5. Klikkaa vasemmasta valikosta: "Raportit" → "Reaaliaikaiset"
+
+6. Jos kaikki toimii, näet itsesi kävijänä muutaman minuutin kuluttua!
+
+
+🔒 TIETOSUOJA & EVÄSTEET
+──────────────────────────────────────────────────────────────
+
+✓ GA4 LADATAAN VAIN kun käyttäjä hyväksyy evästeet
+✓ Jos käyttäjä hylkää evästeet, GA4 ei lataudu = ei seurantaa
+✓ GDPR-yhteensopiva toteutus
+
+
+📊 MITÄ DATAA NÄET?
+──────────────────────────────────────────────────────────────
+
+Google Analyticsissä näet:
+
+• Käyttäjät → Kuinka monta eri henkilöä vierailee
+• Istunnot → Kuinka monta kertaa sivuilla käydään
+• Keskimääräinen istunnon kesto
+• Pomppuprosentti → Kuinka moni lähtee heti
+• Maantieteellinen sijainti
+• Käytetyt laitteet (mobiili 60%, desktop 40%, jne.)
+• Liikennelajit (orgaaninen haku, suora, viittaukset)
+
+
+💡 VINKKEJÄ
+──────────────────────────────────────────────────────────────
+
+• Tarkista raportit viikoittain ymmärtääksesi yleisöäsi
+• Aseta tavoitteita GA4:ssä (esim. yhteydenottolomakkeen lähetykset)
+• Käytä tietoja markkinoinnin optimointiin
+• Katso mistä kävijät tulevat → parempi mainostus
+
+
+🆘 ONGELMATILANTEET
+──────────────────────────────────────────────────────────────
+
+❌ "En näe dataa GA4:ssä"
+   → Odota 24-48h, data alkaa näkyä viiveellä
+   → Varmista että hyväksyit evästeet sivulla
+   → Tarkista että korvaat mittaustunnuksen MOLEMMISTA tiedostoista
+
+❌ "Konsoli näyttää virheen"
+   → Varmista että mittaustunnus on oikein
+   → Tarkista että se alkaa G- kirjaimella
+
+❌ "Sivulatauksia ei näy"
+   → Poista selaimen välimuisti (Ctrl+Shift+Del)
+   → Lataa sivu uudelleen
+
+
+📞 LISÄTIETOJA
+──────────────────────────────────────────────────────────────
+
+Google Analytics Ohjekeskus (suomeksi):
+https://support.google.com/analytics
+
+Google Analytics Academy (ilmainen koulutus):
+https://analytics.google.com/analytics/academy/
+
+
+═══════════════════════════════════════════════════════════════
+Onnea analytiikan käyttöönotossa! 🎉
+═══════════════════════════════════════════════════════════════

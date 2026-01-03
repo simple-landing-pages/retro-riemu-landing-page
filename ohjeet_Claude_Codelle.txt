@@ -1,0 +1,188 @@
+📌 Yleinen tehtävä
+
+Suunnittele ja toteuta moderni, nopea ja tyylikäs landing page -kotisivu nimeltä Retroriemu, käyttäen vain HTML:ää, CSS:ää ja kevyttä JavaScriptiä (ei WordPressiä, ei Reactia, ei build-työkaluja).
+
+Sivun tulee olla yksisivuinen (one-page) ja sopia premium-henkiselle tapahtuma- ja elämyspalvelulle, joka toimii koko Suomessa.
+
+🏷️ Brändi ja konsepti
+
+Nimi: Retroriemu
+
+Palvelu:
+Täyden palvelun tapahtuma- ja elämysjärjestäjä
+(retro-sähköauto, häät, yritystapahtumat, kokkipalvelut, orkesterit, kalusteet)
+
+Kohderyhmä:
+Varakkaat yksityishenkilöt ja yritykset
+
+Tyyli:
+retro + luksus + moderni
+
+Sävyt:
+hillitty, tyylikäs, luotettava, ei nuhjuinen eikä lapsellinen
+
+🎨 Visuaalinen tyyli
+
+Väripaletti:
+
+Tausta: vaalea beige / luonnonvalkoinen
+
+Korostus: kulta
+
+Teksti: tumma harmaa / lähes musta
+
+Fontit (Google Fonts):
+
+Otsikot: Playfair Display tai Cormorant Garamond
+
+Leipäteksti: Open Sans tai Lato
+
+Ulkoasu:
+
+paljon ilmaa (whitespace)
+
+leveä hero-osio
+
+pyöristetyt painikkeet
+
+kevyt varjostus (box-shadow)
+
+🧱 Sivun rakenne (pakollinen)
+1️⃣ HERO-OSIO
+
+Täysleveä taustakuva (retroauto)
+
+Tumma läpinäkyvä overlay, jotta teksti erottuu
+
+Otsikko:
+
+Retroriemu
+
+Alaotsikko:
+
+Elämyksiä juhliin ja tapahtumiin – retrohenkisesti ja vaivattomasti
+
+Call-to-action -painike:
+
+Pyydä tarjous
+
+2️⃣ PALVELUT-OSIO
+
+Kolme tai neljä korttia:
+
+Retro-sähköauto juhliin
+
+Täyden palvelun tapahtumapaketit
+
+Kokkipalvelut ja catering
+
+Orkesterit ja ohjelma
+
+Jokaisessa:
+
+otsikko
+
+1–2 virkkeen kuvaus
+
+yksinkertainen ikoni (SVG tai Unicode)
+
+3️⃣ MIKSI RETRORIEMU
+
+Lyhyt lista:
+
+Kaikki yhdestä paikasta
+
+Ei stressiä tilaajalle
+
+Luotettavat yhteistyökumppanit
+
+Koko Suomi
+
+4️⃣ HINNAT / ESIMERKKIPAKETIT
+
+Esimerkkihinnat (alkaen):
+
+Tapahtumapaketti: alkaen 1500 €
+
+Hääpaketti: alkaen 2000 €
+
+Selkeä huomautus:
+
+Jokainen tapahtuma räätälöidään asiakkaan toiveiden mukaan
+
+5️⃣ YHTEYDENOTTO
+
+Lomake:
+
+nimi
+
+sähköposti
+
+viesti
+
+Lomake ei tarvitse backendia, mutta JS-validointi on ok
+
+Sähköposti näkyviin:
+
+Andreas.lang@saunalahti.fi
+
+6️⃣ FOOTER
+
+Teksti:
+
+© Retroriemu – Elämyksiä juhliin ja tapahtumiin
+Helsinki • Toimimme koko Suomessa
+
+⚙️ Tekninen toteutus
+
+Yksi HTML-tiedosto (index.html)
+
+Erillinen CSS-tiedosto
+
+Kevyt JavaScript vain:
+
+lomakkeen validointiin
+
+smooth scrolliin
+
+Sivun tulee olla:
+
+täysin responsiivinen
+
+nopea (ei turhia kirjastoja)
+
+helposti muokattava
+
+🔍 SEO-vaatimukset
+
+Käytä semanttista HTML:ää (header, section, footer)
+
+Otsikkohierarkia oikein (h1 vain kerran)
+
+Meta title ja meta description suomeksi
+
+Alt-tekstit kuville suomeksi
+
+❌ Älä tee
+
+Älä käytä WordPressiä
+
+Älä käytä Reactia, Vuea tai build-työkaluja
+
+Älä käytä lorem ipsum -tekstiä
+
+Älä tee geneeristä startup-sivua
+
+🎯 Lopputulos
+
+Lopputuloksen tulee olla:
+
+myyntihenkinen mutta hillitty
+
+uskottava luksuspalvelu
+
+valmis julkaistavaksi sellaisenaan kotiserverille
+
+Käytä kuvia Kuvat-kansiossa näin:
+vankkuriauto_kuvake1.png -tiedostoa kuvakkeena
+vankkuriauto_logo1.png -tiedostoa logona

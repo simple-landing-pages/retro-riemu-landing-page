@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Retroriemu - Täyden palvelun tapahtuma- ja elämysjärjestäjä. Retro-sähköauto, häät, yritystapahtumat, kokkipalvelut ja orkesterit koko Suomessa.">
+    <meta name="keywords" content="tapahtumapalvelu, häät, yritystapahtumat, retro-auto, catering, orkesterit, Helsinki">
+    <title>Retroriemu - Elämyksiä juhliin ja tapahtumiin</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Kuvat/vankkuriauto_kuvake1.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Analytics 4 - Ladataan vain jos evästeet hyväksytty -->
+    <!-- KORVAA 'G-XXXXXXXXXX' omalla GA4 Mittaustunnuksella -->
+    <script>
+        // Check if cookies were accepted before loading GA4
+        if (localStorage.getItem('cookieConsent') === 'accepted') {
+            // Load GA4 script
+            (function() {
+                var script = document.createElement('script');
+                script.async = true;
+                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+                document.head.appendChild(script);
+            })();
+
+            // Initialize GA4
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX');
+        }
+    </script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Retroriemu</h1>
+            <p class="hero-subtitle">Elämyksiä juhliin ja tapahtumiin – retrohenkisesti ja vaivattomasti</p>
+            <a href="#contact" class="cta-button">Pyydä tarjous</a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Palvelumme</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚗</div>
+                    <h3 class="service-title">Retro-sähköauto juhliin</h3>
+                    <p class="service-description">Ainutlaatuinen retrohenkinen sähköauto tuo juhlallista tunnelmaa hääparille tai tapahtuman kunniavieraille.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎉</div>
+                    <h3 class="service-title">Täyden palvelun tapahtumapaketit</h3>
+                    <p class="service-description">Suunnittelusta toteutukseen – hoidamme kaiken, jotta voit nauttia omasta tapahtumastasi huolettomasti.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">👨‍🍳</div>
+                    <h3 class="service-title">Kokkipalvelut ja catering</h3>
+                    <p class="service-description">Ammattitaitoiset kokit ja laadukas catering tekevät jokaisesta ateriasta ikimuistoisen elämyksen.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎵</div>
+                    <h3 class="service-title">Orkesterit ja ohjelma</h3>
+                    <p class="service-description">Luotettavat yhteistyökumppanimme tarjoavat korkealaatuista musiikkia ja viihdettä jokaiseen juhlaan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Retroriemu Section -->
+    <section id="why" class="why-section">
+        <div class="container">
+            <h2 class="section-title">Miksi Retroriemu</h2>
+            <div class="why-content">
+                <ul class="why-list">
+                    <li class="why-item">
+                        <span class="why-icon">✓</span>
+                        <span class="why-text">Kaikki yhdestä paikasta – ei tarvetta etsiä useita palveluntarjoajia</span>
+                    </li>
+                    <li class="why-item">
+                        <span class="why-icon">✓</span>
+                        <span class="why-text">Ei stressiä tilaajalle – hoidamme kaiken puolestasi</span>
+                    </li>
+                    <li class="why-item">
+                        <span class="why-icon">✓</span>
+                        <span class="why-text">Luotettavat yhteistyökumppanit – vain parhaita palveluja</span>
+                    </li>
+                    <li class="why-item">
+                        <span class="why-icon">✓</span>
+                        <span class="why-text">Koko Suomi – toimimme kaikkialla Suomessa</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Esimerkkipaketit</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="pricing-title">Tapahtumapaketti</h3>
+                    <p class="pricing-price">alkaen <span class="price-amount">1500 €</span></p>
+                    <p class="pricing-description">Yritystapahtumat, syntymäpäivät ja muut juhlat</p>
+                </div>
+
+                <div class="pricing-card featured">
+                    <h3 class="pricing-title">Hääpaketti</h3>
+                    <p class="pricing-price">alkaen <span class="price-amount">2000 €</span></p>
+                    <p class="pricing-description">Unelmahäät retrotunnelmalla ja täyden palvelun paketti</p>
+                </div>
+            </div>
+            <p class="pricing-note">Jokainen tapahtuma räätälöidään asiakkaan toiveiden mukaan. Pyydä henkilökohtainen tarjous!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Ota yhteyttä</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-text">Lähetä meille viesti, niin palaamme asiaan mahdollisimman pian.</p>
+                    <p class="contact-email">
+                        <strong>Sähköposti:</strong><br>
+                        <a href="mailto:Andreas.lang@saunalahti.fi">Andreas.lang@saunalahti.fi</a>
+                    </p>
+                </div>
+
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nimi *</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Sähköposti *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Viesti *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <button type="submit" class="submit-button">Lähetä viesti</button>
+                    <div class="success-message" id="successMessage">Kiitos viestistäsi! Otamme sinuun yhteyttä pian.</div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© Retroriemu – Elämyksiä juhliin ja tapahtumiin</p>
+            <p class="footer-location">Helsinki • Toimimme koko Suomessa</p>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h3 class="cookie-title">Evästeet</h3>
+                <p class="cookie-description">
+                    Käytämme evästeitä parantaaksemme käyttökokemustasi. Jatkamalla sivuston käyttöä hyväksyt evästeiden käytön.
+                </p>
+            </div>
+            <div class="cookie-buttons">
+                <button id="acceptCookies" class="cookie-btn cookie-accept">Hyväksy</button>
+                <button id="rejectCookies" class="cookie-btn cookie-reject">Hylkää</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
