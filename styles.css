@@ -560,6 +560,23 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-gold);
 }
 
+.footer-privacy {
+    margin-top: var(--spacing-sm);
+    font-size: 0.875rem;
+}
+
+.footer-privacy a {
+    color: var(--color-bg);
+    text-decoration: none;
+    transition: var(--transition);
+    border-bottom: 1px solid transparent;
+}
+
+.footer-privacy a:hover {
+    color: var(--color-gold);
+    border-bottom-color: var(--color-gold);
+}
+
 /* ===========================
    Responsive Design
    =========================== */
