@@ -86,7 +86,7 @@ The landing page must include these sections in order:
 5. **Contact Section**
    - Form fields: name, email, message
    - Form requires JS validation (no backend needed)
-   - Display email: Andreas.lang@saunalahti.fi
+   - Display email: info@retroriemu.fi
 
 6. **Footer**
    - "© Retroriemu – Elämyksiä juhliin ja tapahtumiin"

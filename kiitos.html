@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Kiitos viestistä - Retroriemu</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Kuvat/vankkuriauto_kuvake1.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .thank-you-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-bg);
+            padding: var(--spacing-md);
+        }
+
+        .thank-you-content {
+            max-width: 600px;
+            text-align: center;
+            background-color: var(--color-white);
+            padding: var(--spacing-xxl) var(--spacing-lg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .thank-you-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto var(--spacing-lg);
+            color: var(--color-gold);
+        }
+
+        .thank-you-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .thank-you-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--color-text);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .thank-you-message {
+            font-size: 1.1rem;
+            color: var(--color-text-light);
+            line-height: 1.8;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .thank-you-info {
+            background-color: var(--color-bg);
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+            margin-bottom: var(--spacing-lg);
+            border-left: 4px solid var(--color-gold);
+        }
+
+        .thank-you-info p {
+            margin: 0;
+            color: var(--color-text);
+            font-size: 0.95rem;
+        }
+
+        .thank-you-button {
+            display: inline-block;
+            background-color: var(--color-gold);
+            color: var(--color-text);
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: var(--transition);
+            box-shadow: var(--shadow-medium);
+            text-decoration: none;
+        }
+
+        .thank-you-button:hover {
+            background-color: var(--color-gold-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .thank-you-title {
+                font-size: 2rem;
+            }
+
+            .thank-you-message {
+                font-size: 1rem;
+            }
+
+            .thank-you-content {
+                padding: var(--spacing-lg) var(--spacing-md);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <div class="thank-you-content">
+            <!-- Success Icon -->
+            <div class="thank-you-icon">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2"/>
+                    <path d="M20 32L28 40L44 24" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+
+            <!-- Thank You Message -->
+            <h1 class="thank-you-title">Kiitos viestistäsi!</h1>
+
+            <p class="thank-you-message">
+                Olemme vastaanottaneet viestisi ja palaamme sinuun mahdollisimman pian.
+                Yleensä vastaamme 24 tunnin sisällä.
+            </p>
+
+            <!-- Contact Info -->
+            <div class="thank-you-info">
+                <p><strong>Sähköposti:</strong> info@retroriemu.fi</p>
+            </div>
+
+            <!-- Back to Home Button -->
+            <a href="index.html" class="thank-you-button">Palaa etusivulle</a>
+        </div>
+    </div>
+</body>
+</html>

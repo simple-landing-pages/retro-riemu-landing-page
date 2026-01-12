@@ -170,24 +170,53 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
+    <!-- Custom Quote Section -->
+    <section id="custom-quote" class="custom-quote">
         <div class="container">
-            <h2 class="section-title">Esimerkkipaketit</h2>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3 class="pricing-title">Tapahtumapaketti</h3>
-                    <p class="pricing-price">alkaen <span class="price-amount">1500 €</span></p>
-                    <p class="pricing-description">Yritystapahtumat, syntymäpäivät ja muut juhlat</p>
+            <div class="quote-content">
+                <h2 class="quote-title">Räätälöity tarjous juuri sinulle</h2>
+                <p class="quote-description">
+                    Jokainen tapahtuma on ainutlaatuinen, ja siksi myös tarjouksemme ovat yksilöllisiä.
+                    Kerro meille unelmasi, ja suunnittelemme yhdessä täydellisen kokonaisuuden juuri sinun tarpeidesi mukaan.
+                </p>
+                <div class="quote-features">
+                    <div class="quote-feature">
+                        <div class="quote-feature-icon">
+                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="2"/>
+                                <path d="M24 32L29 37L40 26" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="quote-feature-title">Henkilökohtainen palvelu</h3>
+                        <p class="quote-feature-text">Oma yhteyshenkilö alusta loppuun</p>
+                    </div>
+                    <div class="quote-feature">
+                        <div class="quote-feature-icon">
+                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="16" y="20" width="32" height="28" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M24 20V16C24 14.8954 24.8954 14 26 14H38C39.1046 14 40 14.8954 40 16V20" stroke="currentColor" stroke-width="2"/>
+                                <path d="M28 32H36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M28 38H36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="quote-feature-title">Läpinäkyvä hinnoittelu</h3>
+                        <p class="quote-feature-text">Selkeä tarjous ilman piilokustannuksia</p>
+                    </div>
+                    <div class="quote-feature">
+                        <div class="quote-feature-icon">
+                            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M32 12L36 24L48 26L40 34L42 46L32 40L22 46L24 34L16 26L28 24L32 12Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="quote-feature-title">Räätälöidyt ratkaisut</h3>
+                        <p class="quote-feature-text">Juuri sinun budjettiin sopiva paketti</p>
+                    </div>
                 </div>
-
-                <div class="pricing-card featured">
-                    <h3 class="pricing-title">Hääpaketti</h3>
-                    <p class="pricing-price">alkaen <span class="price-amount">2000 €</span></p>
-                    <p class="pricing-description">Unelmahäät retrotunnelmalla ja täyden palvelun paketti</p>
+                <div class="quote-cta-wrapper">
+                    <a href="#contact" class="quote-cta-button">Pyydä henkilökohtainen tarjous</a>
+                    <p class="quote-cta-note">Vastaamme 24 tunnin sisällä</p>
                 </div>
             </div>
-            <p class="pricing-note">Jokainen tapahtuma räätälöidään asiakkaan toiveiden mukaan. Pyydä henkilökohtainen tarjous!</p>
         </div>
     </section>
 
@@ -200,11 +229,17 @@
                     <p class="contact-text">Lähetä meille viesti, niin palaamme asiaan mahdollisimman pian.</p>
                     <p class="contact-email">
                         <strong>Sähköposti:</strong><br>
-                        <a href="mailto:Andreas.lang@saunalahti.fi">Andreas.lang@saunalahti.fi</a>
+                        <a href="mailto:info@retroriemu.fi">info@retroriemu.fi</a>
                     </p>
                 </div>
 
-                <form id="contactForm" class="contact-form">
+                <form id="contactForm" class="contact-form" name="contact" method="POST" action="/kiitos.html" data-netlify="true" netlify-honeypot="bot-field">
+                    <!-- Netlify Forms hidden fields -->
+                    <input type="hidden" name="form-name" value="contact">
+                    <p style="display: none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                    </p>
+
                     <div class="form-group">
                         <label for="name">Nimi *</label>
                         <input type="text" id="name" name="name" required>

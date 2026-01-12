@@ -234,7 +234,7 @@ Tämä projekti on vapaasti käytettävissä ja muokattavissa.
 ## 🤝 Yhteystiedot
 
 **Retroriemu**
-📧 Email: Andreas.lang@saunalahti.fi
+📧 Email: info@retroriemu.fi
 📍 Helsinki, Suomi
 
 ---

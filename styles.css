@@ -340,83 +340,117 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ===========================
-   Pricing Section
+   Custom Quote Section
    =========================== */
 
-.pricing {
+.custom-quote {
     padding: var(--spacing-xxl) 0;
     background-color: var(--color-white);
 }
 
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
-    max-width: 900px;
-    margin: 0 auto var(--spacing-lg);
+.quote-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.pricing-card {
+.quote-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+}
+
+.quote-description {
+    font-size: 1.15rem;
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-xl);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quote-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.quote-feature {
     background-color: var(--color-bg);
     padding: var(--spacing-lg);
     border-radius: var(--border-radius);
     text-align: center;
-    box-shadow: var(--shadow-subtle);
     transition: var(--transition);
+    box-shadow: var(--shadow-subtle);
 }
 
-.pricing-card.featured {
-    background-color: var(--color-text);
-    color: var(--color-white);
-    transform: scale(1.05);
-}
-
-.pricing-card:hover {
-    transform: translateY(-5px) scale(1.02);
+.quote-feature:hover {
+    transform: translateY(-5px);
     box-shadow: var(--shadow-medium);
 }
 
-.pricing-card.featured:hover {
-    transform: translateY(-5px) scale(1.07);
-}
-
-.pricing-title {
-    font-size: 1.8rem;
-    margin-bottom: var(--spacing-sm);
-}
-
-.pricing-card.featured .pricing-title {
+.quote-feature-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto var(--spacing-md);
     color: var(--color-gold);
+    transition: var(--transition);
 }
 
-.pricing-price {
-    font-size: 1.2rem;
-    margin-bottom: var(--spacing-md);
+.quote-feature-icon svg {
+    width: 100%;
+    height: 100%;
 }
 
-.price-amount {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--color-gold);
-    display: block;
-    margin-top: var(--spacing-xs);
+.quote-feature:hover .quote-feature-icon {
+    color: var(--color-gold-dark);
+    transform: scale(1.1);
 }
 
-.pricing-description {
+.quote-feature-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xs);
+}
+
+.quote-feature-text {
     color: var(--color-text-light);
+    font-size: 0.95rem;
     line-height: 1.6;
 }
 
-.pricing-card.featured .pricing-description {
-    color: var(--color-bg);
+.quote-cta-wrapper {
+    text-align: center;
 }
 
-.pricing-note {
-    text-align: center;
-    font-style: italic;
+.quote-cta-button {
+    display: inline-block;
+    background-color: var(--color-gold);
+    color: var(--color-text);
+    padding: 1.25rem 3rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: var(--transition);
+    box-shadow: var(--shadow-medium);
+    text-decoration: none;
+    margin-bottom: var(--spacing-sm);
+}
+
+.quote-cta-button:hover {
+    background-color: var(--color-gold-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.quote-cta-note {
+    font-size: 0.9rem;
     color: var(--color-text-light);
-    max-width: 600px;
-    margin: 0 auto;
+    font-style: italic;
 }
 
 /* ===========================
@@ -661,13 +695,17 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1rem;
     }
 
-    .pricing-grid {
+    .quote-features {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
     }
 
-    .pricing-card.featured {
-        transform: scale(1);
+    .quote-title {
+        font-size: 2rem;
+    }
+
+    .quote-description {
+        font-size: 1rem;
     }
 
     .contact-content {
@@ -776,16 +814,26 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1.25rem;
     }
 
-    .pricing-title {
-        font-size: 1.5rem;
+    .quote-title {
+        font-size: 1.75rem;
     }
 
-    .price-amount {
-        font-size: 2rem;
+    .quote-description {
+        font-size: 0.95rem;
     }
 
-    .pricing-description {
-        font-size: 0.9rem;
+    .quote-feature-title {
+        font-size: 1.15rem;
+    }
+
+    .quote-feature-text {
+        font-size: 0.875rem;
+    }
+
+    .quote-cta-button {
+        width: 100%;
+        padding: 1rem 2rem;
+        font-size: 1rem;
     }
 
     .contact-text,

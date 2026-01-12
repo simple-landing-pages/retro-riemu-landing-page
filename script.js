@@ -130,8 +130,6 @@ messageInput.addEventListener('input', function() {
 
 // Form submission
 contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-
     // Hide success message if showing
     successMessage.classList.remove('show');
 
@@ -140,34 +138,15 @@ contactForm.addEventListener('submit', function(e) {
     const isEmailValid = validateEmail();
     const isMessageValid = validateMessage();
 
-    // If all fields are valid
-    if (isNameValid && isEmailValid && isMessageValid) {
-        // Create mailto link
-        const name = nameInput.value.trim();
-        const email = emailInput.value.trim();
-        const message = messageInput.value.trim();
-
-        const subject = encodeURIComponent('Yhteydenottopyyntö - Retroriemu');
-        const body = encodeURIComponent(
-            `Nimi: ${name}\n` +
-            `Sähköposti: ${email}\n\n` +
-            `Viesti:\n${message}`
-        );
-
-        const mailtoLink = `mailto:Andreas.lang@saunalahti.fi?subject=${subject}&body=${body}`;
-
-        // Open email client
-        window.location.href = mailtoLink;
-
-        // Show success message
-        successMessage.classList.add('show');
-
-        // Reset form after short delay
-        setTimeout(() => {
-            contactForm.reset();
-            successMessage.classList.remove('show');
-        }, 3000);
+    // If validation fails, prevent form submission
+    if (!isNameValid || !isEmailValid || !isMessageValid) {
+        e.preventDefault();
+        return false;
     }
+
+    // If all fields are valid, allow form to submit naturally to Netlify
+    // Netlify will handle the form submission and redirect to success page
+    console.log('Form submitted successfully to Netlify');
 });
 
 // ===========================

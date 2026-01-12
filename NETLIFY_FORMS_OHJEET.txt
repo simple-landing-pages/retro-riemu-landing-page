@@ -1,0 +1,244 @@
+═══════════════════════════════════════════════════════════════
+  NETLIFY FORMS KÄYTTÖÖNOTTO-OHJEET
+═══════════════════════════════════════════════════════════════
+
+📧 MITÄ NETLIFY FORMS TEKEE?
+──────────────────────────────────────────────────────────────
+
+Netlify Forms käsittelee lomakelähetykset automaattisesti:
+
+✓ Lomakkeet lähetetään suoraan ilman sähköpostiohjelmaa
+✓ Viestit tallennetaan Netlify-hallintapaneeliin
+✓ Saat sähköposti-ilmoituksen jokaisesta viestistä
+✓ Roskapostisuojaus (honeypot) sisäänrakennettuna
+✓ Ilmainen (100 lomakelähetystä/kuukausi)
+
+
+📋 VAIHE 1: LOMAKE ON JO VALMIS
+──────────────────────────────────────────────────────────────
+
+Lomake on jo integroitu Netlify Formsin kanssa! Se sisältää:
+
+✓ name="contact" attribuutti
+✓ method="POST"
+✓ data-netlify="true"
+✓ netlify-honeypot="bot-field" (roskapostisuojaus)
+✓ Piilokenttä: form-name
+✓ Validointi JavaScriptillä
+
+Ei tarvitse tehdä mitään HTML-koodiin!
+
+
+📋 VAIHE 2: PUSHAA MUUTOKSET GITHUBIIN
+──────────────────────────────────────────────────────────────
+
+1. Tallenna kaikki muutokset
+
+2. Pushaa GitHubiin:
+
+   git add .
+   git commit -m "Add Netlify Forms integration"
+   git push
+
+
+📋 VAIHE 3: NETLIFY AKTIVOI LOMAKKEEN AUTOMAATTISESTI
+──────────────────────────────────────────────────────────────
+
+Kun pushaat GitHubiin:
+
+1. Netlify havaitsee lomakkeen automaattisesti
+2. Luo lomakkeen hallintapaneeliin
+3. Aktivoi lomakkeen käsittelyn
+
+Odota ~1-2 minuuttia että deploy valmistuu!
+
+
+📋 VAIHE 4: TESTAA LOMAKE
+──────────────────────────────────────────────────────────────
+
+1. Mene sivulle: https://retroriemu.netlify.app/
+
+2. Täytä yhteydenottolomake:
+   - Syötä nimi
+   - Syötä sähköposti
+   - Kirjoita viesti
+
+3. Klikkaa "Lähetä viesti"
+
+4. Jos onnistuu:
+   → Sinut ohjataan kiitossivulle (kiitos.html)
+   → Näet viestin "Kiitos viestistäsi!"
+
+
+📋 VAIHE 5: TARKISTA VIESTIT NETLIFYSSA
+──────────────────────────────────────────────────────────────
+
+1. Kirjaudu: https://app.netlify.com/
+
+2. Valitse sivusto: retroriemu
+
+3. Mene: "Forms" välilehdelle (vasemmasta valikosta)
+
+4. Näet kaikki lomakelähetykset listana:
+   - Lähettäjän nimi
+   - Sähköposti
+   - Viesti
+   - Lähetysaika
+
+5. Klikkaa viestiä nähdäksesi täyden sisällön
+
+
+📋 VAIHE 6: ASETA SÄHKÖPOSTI-ILMOITUKSET
+──────────────────────────────────────────────────────────────
+
+Saat automaattisen sähköposti-ilmoituksen jokaisesta viestistä:
+
+1. Netlify → "Forms" → Valitse "contact" lomake
+
+2. Klikkaa "Form notifications"
+
+3. Klikkaa "Add notification" → "Email notification"
+
+4. Syötä sähköpostiosoite: info@retroriemu.fi
+
+5. Valitse: "New form submission"
+
+6. Klikkaa "Save"
+
+Nyt saat sähköpostin jokaisesta lomakelähetyksestä!
+
+
+📧 SÄHKÖPOSTI-ILMOITUKSEN SISÄLTÖ
+──────────────────────────────────────────────────────────────
+
+Saat tällaisen viestin:
+
+Subject: New submission from Retroriemu contact form
+
+Body:
+─────────────────────────────────
+Nimi: [Nimi]
+Sähköposti: [email@example.com]
+Viesti: [Viestin sisältö]
+─────────────────────────────────
+
+
+🔒 ROSKAPOSTISUOJAUS
+──────────────────────────────────────────────────────────────
+
+Lomake sisältää kaksi roskapostisuojaa:
+
+1. Honeypot-kenttä:
+   - Piilokenttä "bot-field"
+   - Näkymätön ihmisille
+   - Botit täyttävät sen → Netlify hylkää
+
+2. reCAPTCHA (valinnainen):
+   - Voit aktivoida Netlifyssa
+   - Settings → Forms → Enable reCAPTCHA
+
+
+💰 HINNOITTELU
+──────────────────────────────────────────────────────────────
+
+Netlify Forms hinnoittelu:
+
+✓ Ilmainen: 100 lomakelähetystä/kuukausi
+✓ Level 1 ($19/kk): 1,000 lähetystä/kuukausi
+✓ Level 2 ($99/kk): 10,000 lähetystä/kuukausi
+
+100 lähetystä/kuukausi = ~3 viestiä päivässä
+→ Todennäköisesti riittää ilmainen!
+
+
+🎯 EDUT VERRATTUNA MAILTO-LINKKIIN
+──────────────────────────────────────────────────────────────
+
+| mailto: | Netlify Forms |
+|---------|---------------|
+| ❌ Avaa sähköpostiohjelman | ✅ Lähettää suoraan |
+| ❌ Käyttäjällä oltava sähköposti asetettuna | ✅ Toimii kaikilla |
+| ❌ Ei roskapostisuojausta | ✅ Honeypot + reCAPTCHA |
+| ❌ Ei viestihistoriaa | ✅ Kaikki viestit tallessa |
+| ❌ Ei statistiikkaa | ✅ Tilastot Netlifyssa |
+
+
+📊 MITÄ DATAA NÄET NETLIFYSSA?
+──────────────────────────────────────────────────────────────
+
+Netlify Forms -hallintapaneelissa näet:
+
+• Kaikki viestit listana
+• Päivämäärä ja aika
+• Lähettäjän tiedot
+• Viestin sisältö
+• IP-osoite
+• User agent (selain)
+• Roskapostimerkinnät
+
+
+🆘 ONGELMATILANTEET
+──────────────────────────────────────────────────────────────
+
+❌ "Lomake ei lähetä / 404 error"
+
+Ratkaisu:
+1. Varmista että pushit GitHubiin
+2. Odota että Netlify deploy valmistuu
+3. Tarkista että lomakkeessa on:
+   - name="contact"
+   - data-netlify="true"
+   - method="POST"
+
+
+❌ "En näe lomaketta Netlify-hallintapaneelissa"
+
+Ratkaisu:
+1. Netlify havaitsee lomakkeen vasta kun:
+   - Koodi on pushattu GitHubiin
+   - Deploy on valmis
+   - Joku on lähettänyt lomakkeen
+2. Lähetä testimiesti lomakkeella
+3. Päivitä Netlify-sivu (F5)
+
+
+❌ "En saa sähköposti-ilmoituksia"
+
+Ratkaisu:
+1. Tarkista roskaposti-kansio
+2. Varmista että olet lisännyt notification:
+   - Netlify → Forms → contact → Notifications
+3. Tarkista sähköpostiosoite on oikein
+
+
+❌ "Liikaa roskapostia"
+
+Ratkaisu:
+1. Aktivoi reCAPTCHA:
+   - Netlify → Site settings → Forms
+   - Enable reCAPTCHA v2
+2. Tai käytä Akismet-integraatiota
+
+
+💡 VINKKEJÄ
+──────────────────────────────────────────────────────────────
+
+✓ Tyhjennä roskapostiviestit säännöllisesti Netlifysta
+✓ Lataa CSV-export viesteistä arkistointia varten
+✓ Aseta automaattinen vastausviesti (webhook)
+✓ Käytä Zapier-integraatiota lähettääksesi viestit CRM:ään
+
+
+📞 LISÄTIETOJA
+──────────────────────────────────────────────────────────────
+
+Netlify Forms dokumentaatio:
+https://docs.netlify.com/forms/setup/
+
+Netlify Forms spam filters:
+https://docs.netlify.com/forms/spam-filters/
+
+
+═══════════════════════════════════════════════════════════════
+Onnea lomakkeen käyttöön! 📧
+═══════════════════════════════════════════════════════════════
