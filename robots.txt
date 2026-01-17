@@ -1,0 +1,10 @@
+# Retroriemu.fi - robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://retroriemu.fi/sitemap.xml
+
+# Disallow kiitos-sivu (ei tarvetta indeksoida)
+Disallow: /kiitos.html
