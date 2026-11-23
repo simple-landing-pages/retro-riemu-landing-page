@@ -5,3 +5,6 @@ Thumbs.db
 # Claude Code temp files
 tmpclaude-*
 .claude/settings.local.json
+
+# Painotiedostot (alkuperäiset julkisivumateriaalit) – verkkoversiot ovat Kuvat/web/
+Kuvat/Julkisivumatskut/

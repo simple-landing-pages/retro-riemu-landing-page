@@ -1011,3 +1011,58 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 0.875rem;
     }
 }
+
+/* ===========================
+   Retroriemu-auto: yläpalkki (retroauto.html)
+   =========================== */
+
+.auto-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 0.75rem var(--spacing-md);
+    background-color: var(--color-text);
+    box-shadow: var(--shadow-medium);
+}
+
+.auto-topbar a {
+    font-family: var(--font-body);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.auto-topbar-back {
+    color: var(--color-bg);
+}
+
+.auto-topbar-back:hover {
+    color: var(--color-gold);
+}
+
+.auto-topbar-cta {
+    color: var(--color-text);
+    background-color: var(--color-gold);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    white-space: nowrap;
+}
+
+.auto-topbar-cta:hover {
+    background-color: var(--color-gold-dark);
+}
+
+@media (max-width: 480px) {
+    .auto-topbar {
+        padding: 0.6rem var(--spacing-sm);
+        font-size: 0.9rem;
+    }
+
+    .auto-topbar-cta {
+        padding: 0.4rem 0.9rem;
+    }
+}
