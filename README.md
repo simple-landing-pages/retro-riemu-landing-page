@@ -20,7 +20,7 @@
 - 🍪 **GDPR-yhteensopiva** - Eväste-ilmoitus ja -hallinta
 - 📊 **Google Analytics 4** - Integroitu analytiikka evästeiden kanssa
 - ⚡ **Nopea** - Ei turhia kirjastoja, optimoitu suorituskyky
-- ✉️ **Yhteydenottolomake** - Validointi ja mailto-integraatio
+- ✉️ **Yhteydenottolomake** - Validointi ja Netlify Forms -integraatio
 - ♿ **Saavutettava** - Semanttinen HTML, hyvä kontrastisuhde
 
 ---
@@ -47,13 +47,19 @@ retroriemu-landing-page/
 ├── index.html              # Pääsivu (kaikki osiot)
 ├── styles.css              # Kaikki tyylit ja responsiivisuus
 ├── script.js               # JavaScript-toiminnallisuudet
+├── kiitos.html            # Kiitossivu lomakkeen lähetyksen jälkeen
+├── tietosuoja.html        # Tietosuojaseloste
+├── sitemap.xml            # Sivukartta hakukoneille
+├── robots.txt             # Hakukonerobottien ohjeet
 ├── GA4_OHJEET.txt         # Google Analytics 4 käyttöönotto-ohjeet
+├── NETLIFY_FORMS_OHJEET.txt  # Netlify Forms käyttöönotto-ohjeet
 ├── CLAUDE.md              # Tekninen dokumentaatio kehittäjille
 ├── README.md              # Tämä tiedosto
 │
 └── Kuvat/
-    ├── vankkuriauto_logo1.png     # Hero-osion taustakuva
-    └── vankkuriauto_kuvake1.png   # Favicon
+    ├── vankkuriauto_logo1.png        # Hero-osion taustakuva
+    ├── vankkuriauto_kuvake1.png      # Favicon
+    └── vankkuriauto_haatapahtuma1.png  # Hääosion kuva
 ```
 
 ---
@@ -194,12 +200,15 @@ Sivusto on optimoitu kaikille näyttöko'oille:
 
 ## ✉️ Yhteydenottolomake
 
-Lomake käyttää **client-side validointia** ja **mailto:**-linkkiä:
+Lomake käyttää **client-side validointia** ja **Netlify Formsia**:
 
-- ✅ Ei vaadi backend-palvelinta
+- ✅ Ei vaadi omaa backend-palvelinta
 - ✅ Reaaliaikainen validointi suomeksi
-- ✅ Avaa käyttäjän sähköpostiohjelman
-- ✅ Esiladattu aihe ja viesti
+- ✅ Viesti lähetetään suoraan Netlifyyn, ja käyttäjä ohjataan kiitossivulle (`kiitos.html`)
+- ✅ Roskapostisuojaus (honeypot-kenttä)
+- ℹ️ Lomake toimii vain julkaistulla sivustolla, ei paikallisesti
+
+Käyttöönotto- ja ilmoitusasetukset: katso `NETLIFY_FORMS_OHJEET.txt`.
 
 ### Validointisäännöt:
 - **Nimi**: Vähintään 2 merkkiä

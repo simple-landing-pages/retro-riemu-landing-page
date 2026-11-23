@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+*.log
+
+# Claude Code temp files
+tmpclaude-*
+.claude/settings.local.json
