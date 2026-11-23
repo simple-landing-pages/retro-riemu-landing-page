@@ -108,6 +108,8 @@ header[id] {
 .btn-orange:hover { background-color: var(--k-orange-dark); }
 .btn-blue { background-color: var(--k-blue); }
 .btn-blue:hover { background-color: var(--k-blue-dark); }
+.btn-purple { background-color: var(--k-purple); }
+.btn-purple:hover { background-color: #632F83; }
 
 /* ===========================
    Navigaatio
@@ -333,6 +335,60 @@ header[id] {
 
 .card-link:hover {
     border-bottom-color: var(--k-white);
+}
+
+/* Tori.fi-profiili */
+
+.tori-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 1.75rem 2rem;
+    background-color: var(--k-white);
+    border: 3px dashed var(--k-purple);
+    border-radius: var(--k-radius);
+    box-shadow: var(--k-shadow);
+}
+
+.tori-title {
+    font-family: var(--k-font-heading);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--k-purple);
+    margin-bottom: 0.4rem;
+}
+
+.tori-text p {
+    color: var(--k-text-light);
+}
+
+.tori-note {
+    margin-top: 0.75rem;
+    padding: 0.6rem 0.9rem;
+    background-color: rgba(123, 63, 160, 0.08);
+    border-left: 4px solid var(--k-purple);
+    border-radius: 6px;
+    font-size: 0.97rem;
+}
+
+.tori-box .btn {
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .tori-box {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        padding: 1.5rem 1.25rem;
+        gap: 1.25rem;
+    }
+
+    .tori-note {
+        text-align: left;
+    }
 }
 
 /* Ompelimo */
